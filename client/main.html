@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bitcoin Miner</title>
+    <link rel="icon" href="/img/assets/icon.png">
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.color.js"></script>
+    <script src="/js/biginteger.min.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  
+  <body>
+    <div id="page">
+      <div id="rnotif" class="hide">
+          <div id="backing">
+            <div style="font-size: 0.8em; display: block; margin: 2vh">Are you sure you want to reset ALL progress?</div>
+            <div style="font-size: 0.8em; display: block; margin: 2vh; color:#CD0000">Your data will NOT be recoverable.</div>
+            <div id="rbuttons">
+              <div class="resetb noselect" id="ryes">Yes</div>
+              <div class="resetb noselect" id="rno">No</div>
+            </div>
+          </div>
+      </div>
+      
+      <div id="header">
+        <div id="top">
+          <div id="trim" style="width: 100vw"></div>
+          <img id="title" src="/img/assets/title.png" />
+          <div id="snotif">
+            Game Saved
+          </div>
+          <div class="button noselect" id="save">Save</div>
+          <div class="button noselect" id="reset">Reset</div>
+          <div id="news">
+            <div id="headline">
+          </div>
+          </div>
+        </div>
+        <div id="portfolio">
+          <div id="portfoliotop">
+            <div class="nums">
+              <span id="btcwallet">0.0000000</span> <span style="color: #F7931A">BTC</span>
+            </div>
+            
+            <img class="arrow" style="left: 32.83vw;" src="/img/assets/arrow.png" />
+            
+            <div class="nums">
+              1 <span style="color: #F7931A">BTC</span> = <span id="btc">$0.00</span>
+            </div>
+            
+            <img class="arrow" style="left: 65.67vw;" src="/img/assets/arrow.png" />
+            
+            <div class="nums">
+              $<span id="usdwallet">0</span>
+            </div>
+          </div>
+          
+          <div id="portfoliobottom">
+            <div class="nums">
+              +<span id="persec">0.0000000</span> <span style="color: #F7931A">BTC</span> per second
+            </div>
+            
+            <div class="nums">
+              <div style="height: 100%; width: 2vh; display:inline-block;">
+                <img id="change" src="/img/assets/neutral.png" /> 
+              </div>
+              
+              <span id="difference" style="display:inline-block;">$0.00</span>
+            </div>
+            
+            <div class="nums">
+              +$<span id="usdpersec">0.000</span> per second
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div id="container" class="noselect">
+        <div id="coinclick"></div>
+        <canvas id="canvas"></canvas>
+      </div>
+  
+      <div id="store">
+        <div id="storetitle">Store</div>
+        <div id="shopoptions">
+          <div id="buy1" class="shopoption selected noselect">Buy 1</div>
+          <div id="buy5" class="shopoption noselect">Buy 5</div>
+          <div id="buy10" class="shopoption noselect">Buy 10</div>
+        </div>
+        
+        <div class="collection">
+            
+            <div class="item locked noselect" id="item1">
+              <div id="name1" class="name">???</div>
+              <img class="display" src="/img/store/transistor.png" />
+              <img id="display1" class="display" src="/img/store/locked/transistor_locked.png" />
+              <div id="price1" class=price></div>
+              <div id="amount1" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item2">
+              <div id="name2" class="name">???</div>
+              <img class="display" src="/img/store/pi.png" />
+              <img id="display2" class="display" src="/img/store/locked/pi_locked.png" />
+              <div id="price2" class=price></div>
+              <div id="amount2" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item3">
+              <div id="name3" class="name">???</div>
+              <img class="display" src="/img/store/pentium.png" />
+              <img id="display3" class="display" src="/img/store/locked/pentium_locked.png" />
+              <div id="price3" class=price></div>
+              <div id="amount3" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item4">
+              <div id="name4" class="name">???</div>
+              <img class="display" src="/img/store/gtx.png" />
+              <img id="display4" class="display" src="/img/store/locked/gtx_locked.png" />
+              <div id="price4" class=price></div>
+              <div id="amount4" class="amount hide"></div>
+            </div>
+          </div>
+          
+        <div class="collection">
+            <div class="item locked noselect" id="item5">
+              <div id="name5" class="name">???</div>
+              <img class="display" src="/img/store/warehouse.png" />
+              <img id="display5" class="display" src="/img/store/locked/warehouse_locked.png" />
+              <div id="price5" class=price></div>
+              <div id="amount5" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item6">
+              <div id="name6" class="name">???</div>
+              <img class="display" src="/img/store/botnet.png" />
+              <img id="display6" class="display" src="/img/store/locked/botnet_locked.png" />
+              <div id="price6" class=price></div>
+              <div id="amount6" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item7">
+              <div id="name7" class="name">???</div>
+              <img class="display" src="/img/store/quantum.png" />
+              <img id="display7" class="display" src="/img/store/locked/quantum_locked.png" />
+              <div id="price7" class=price></div>
+              <div id="amount7" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item8">
+              <div id="name8" class="name">???</div>
+              <img class="display" src="/img/store/shrine.png" />
+              <img id="display8" class="display" src="/img/store/locked/shrine_locked.png" />
+              <div id="price8" class=price></div>
+              <div id="amount8" class="amount hide"></div>
+            </div>
+        </div>
+        
+        <div class="collection">
+            <div class="item locked noselect" id="item9">
+              <div id="name9" class="name">???</div>
+              <img class="display" src="/img/store/alien.png" />
+              <img id="display9" class="display" src="/img/store/locked/alien_locked.png" />
+              <div id="price9" class=price></div>
+              <div id="amount9" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item10">
+              <div id="name10" class="name">???</div>
+              <img class="display" src="/img/store/crystal.png" />
+              <img id="display10" class="display" src="/img/store/locked/crystal_locked.png" />
+              <div id="price10" class=price></div>
+              <div id="amount10" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item11">
+              <div id="name11" class="name">???</div>
+              <img class="display" src="/img/store/rift.png" />
+              <img id="display11" class="display" src="/img/store/locked/rift_locked.png" />
+              <div id="price11" class=price></div>
+              <div id="amount11" class="amount hide"></div>
+            </div>
+            <div class="item locked noselect" id="item12">
+              <div id="name12" class="name">???</div>
+              <img class="display" src="/img/store/matrix.png" />
+              <img id="display12" class="display" src="/img/store/locked/matrix_locked.png" />
+              <div id="price12" class=price></div>
+              <div id="amount12" class="amount hide"></div>
+            </div>
+        </div>
+      </div>
+        
+      <div id="footer">
+        Powered by <a class="link" href="https://www.coindesk.com/price/" target="_blank">CoinDesk</a>
+      </div>
+      
+      <div id="space">
+        <div id="itemhover" class="hide">
+          <div id="namehover"></div>
+          <div id="pricehover"></div>
+          <div id="amounthover"></div>
+          <div id="deschover">
+            <div id="infohover" class="hover"></div>
+            <div id="persechover" class="hover"></div>
+            <div id="totalhover" class="hover"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div id="loading">
+    <div id="loadtext">Loading...</div>
+  </div>
+  </body>
+</html>
