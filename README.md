@@ -1,6 +1,4 @@
 # Bitcoin Miner
-Original Release: 2018
-
 Bitcoin Miner is based off of the popular game Cookie Clicker but with a twist. The player's currency is altered in real time by the current price of bitcoin. 
 
 ![Alt text](img/main.png?raw=true "Bitcoin Miner")
