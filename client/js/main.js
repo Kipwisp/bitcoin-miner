@@ -665,12 +665,10 @@ $(document).ready(function(){
         callback();
     }
     
-    // using a worker to allow btc to be accumulated in the background
-    var worker = new Worker("/js/worker.js");
         
     var accum = 0;
     
-    worker.onmessage = function(e) {
+    setInterval(function() {
         // bigints can't add decimals, so accumulate the decimals each iteration until it reaches 1 and then add it
         accum += mod;
         
@@ -681,7 +679,7 @@ $(document).ready(function(){
             addBTC(1);
             accum = 0;
         }
-    };
+    }, 50);
     
     // display loading screen until everything is loaded
     $(window).load(function() {
