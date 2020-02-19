@@ -259,9 +259,9 @@ function getBTCData(current, callback)
           date.setDate(date.getDate()-1);
           
           try {
-            processedData = Math.round(data.bpi[date.getFullYear() + '-' + ("0"+(date.getMonth()+1)).slice(-2) + '-' + ("0"+date.getDate()).slice(-2)]*100);
+            processedData = Math.round(data.bpi[Object.keys(data.bpi)[0]]*100);
           }
-          catch(error) {
+          catch (error) {
             console.log("Error fetching yesterday's BTC data.");
           }
          }
