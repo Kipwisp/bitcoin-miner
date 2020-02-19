@@ -12,200 +12,200 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //-----------------------------------------------------------------------------------------------
 
 app.get('/', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/main.html'));
+  res.sendFile(path.join(__dirname+'/client/main.html'));
 });
 
 // JAVASCRIPT
 //-----------------------------------------------------------------------------------------------
 
 app.get('/js/main.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/js/main.js'));
+  res.sendFile(path.join(__dirname+'/client/js/main.js'));
 });
 
 app.get('/js/worker.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/js/worker.js'));
+  res.sendFile(path.join(__dirname+'/client/js/worker.js'));
 });
 
 app.get('/js/jquery.min.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/js/jquery.min.js'));
+  res.sendFile(path.join(__dirname+'/client/js/jquery.min.js'));
 });
 
 app.get('/js/jquery.color.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/js/jquery.color.js'));
+  res.sendFile(path.join(__dirname+'/client/js/jquery.color.js'));
 });
 
 app.get('/js/biginteger.min.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/js/biginteger.min.js'));
+  res.sendFile(path.join(__dirname+'/client/js/biginteger.min.js'));
 });
 
 // CSS
 //-----------------------------------------------------------------------------------------------
 
 app.get('/css/style.css', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/css/style.css'));
+  res.sendFile(path.join(__dirname+'/client/css/style.css'));
 });
 
 // IMAGES
 //-----------------------------------------------------------------------------------------------
 
 app.get('/img/assets/up.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/up.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/up.png'));
 });
 
 app.get('/img/assets/down.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/down.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/down.png'));
 });
 
 app.get('/img/assets/neutral.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/neutral.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/neutral.png'));
 });
 
 app.get('/img/assets/arrow.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/arrow.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/arrow.png'));
 });
 
 app.get('/img/assets/title.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/title.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/title.png'));
 });
 
 app.get('/img/assets/icon.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/icon.png'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/icon.png'));
 });
 
 app.get('/img/assets/load.gif', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/assets/load.gif'));
+  res.sendFile(path.join(__dirname+'/client/img/assets/load.gif'));
 });
 
 app.get('/img/canvas/rays_final.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/canvas/rays_final.png'));
+  res.sendFile(path.join(__dirname+'/client/img/canvas/rays_final.png'));
 });
 
 app.get('/img/canvas/rays_large.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/canvas/rays_large.png'));
+  res.sendFile(path.join(__dirname+'/client/img/canvas/rays_large.png'));
 });
 
 app.get('/img/canvas/rays_small.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/canvas/rays_small.png'));
+  res.sendFile(path.join(__dirname+'/client/img/canvas/rays_small.png'));
 });
 
 app.get('/img/canvas/btc.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/canvas/btc.png'));
+  res.sendFile(path.join(__dirname+'/client/img/canvas/btc.png'));
 });
 
 app.get('/img/canvas/coin.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/canvas/coin.png'));
+  res.sendFile(path.join(__dirname+'/client/img/canvas/coin.png'));
 });
 
 app.get('/img/store/transistor.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/transistor.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/transistor.png'));
 });
 
 app.get('/img/store/pi.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/pi.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/pi.png'));
 });
 
 app.get('/img/store/pentium.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/pentium.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/pentium.png'));
 });
 
 app.get('/img/store/gtx.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/gtx.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/gtx.png'));
 });
 
 app.get('/img/store/warehouse.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/warehouse.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/warehouse.png'));
 });
 
 app.get('/img/store/botnet.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/botnet.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/botnet.png'));
 });
 
 app.get('/img/store/quantum.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/quantum.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/quantum.png'));
 });
 
 app.get('/img/store/alien.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/alien.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/alien.png'));
 });
 
 app.get('/img/store/rift.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/rift.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/rift.png'));
 });
 
 app.get('/img/store/shrine.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/shrine.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/shrine.png'));
 });
 
 app.get('/img/store/crystal.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/crystal.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/crystal.png'));
 });
 
 app.get('/img/store/matrix.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/matrix.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/matrix.png'));
 });
 
 
 app.get('/img/store/locked/transistor_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/transistor_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/transistor_locked.png'));
 });
 
 app.get('/img/store/locked/pi_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/pi_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/pi_locked.png'));
 });
 
 app.get('/img/store/locked/pentium_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/pentium_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/pentium_locked.png'));
 });
 
 app.get('/img/store/locked/gtx_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/gtx_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/gtx_locked.png'));
 });
 
 app.get('/img/store/locked/warehouse_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/warehouse_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/warehouse_locked.png'));
 });
 
 app.get('/img/store/locked/botnet_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/botnet_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/botnet_locked.png'));
 });
 
 app.get('/img/store/locked/quantum_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/quantum_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/quantum_locked.png'));
 });
 
 app.get('/img/store/locked/alien_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/alien_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/alien_locked.png'));
 });
 
 app.get('/img/store/locked/rift_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/rift_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/rift_locked.png'));
 });
 
 app.get('/img/store/locked/shrine_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/shrine_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/shrine_locked.png'));
 });
 
 app.get('/img/store/locked/crystal_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/crystal_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/crystal_locked.png'));
 });
 
 app.get('/img/store/locked/matrix_locked.png', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/img/store/locked/matrix_locked.png'));
+  res.sendFile(path.join(__dirname+'/client/img/store/locked/matrix_locked.png'));
 });
 
 // AUDIO
 //-----------------------------------------------------------------------------------------------
 
 app.get('/audio/coin1.wav', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/audio/coin1.wav'));
+  res.sendFile(path.join(__dirname+'/client/audio/coin1.wav'));
 });
 
 app.get('/audio/coin2.wav', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/audio/coin2.wav'));
+  res.sendFile(path.join(__dirname+'/client/audio/coin2.wav'));
 });
 
 app.get('/audio/coin3.wav', function (req, res) {
-  res.sendfile(path.join(__dirname+'/client/audio/coin3.wav'));
+  res.sendFile(path.join(__dirname+'/client/audio/coin3.wav'));
 });
 
 
