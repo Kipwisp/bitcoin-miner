@@ -10,6 +10,7 @@ $(document).ready(function(){
     var btcPrice = 0;
     var yesterdayPrice = 0;
     var change = 0;
+    var tick = 20;
     
     // stuff from store
     var buyAmount = 1;
@@ -424,17 +425,19 @@ $(document).ready(function(){
     
     // add btc per sec
     function addBTCPerSec(amount) {
+        let divisor = 1000/tick;
         btcPerSec = btcPerSec.plus(amount);
-        mod = btcPerSec.mod(20)/20;
-        div = btcPerSec.divide(20);
+        mod = btcPerSec.mod(divisor)/divisor;
+        div = btcPerSec.divide(divisor);
         updatePerSec();
     }
     
     // set btc per sec
     function setBTCPerSec(amount) {
+        let divisor = 1000/tick;
         btcPerSec = bigInt(amount);
-        mod = btcPerSec.mod(20)/20;
-        div = btcPerSec.divide(20);
+        mod = btcPerSec.mod(divisor)/divisor;
+        div = btcPerSec.divide(divisor);
         updatePerSec();
     }
     
@@ -665,21 +668,29 @@ $(document).ready(function(){
         callback();
     }
     
-        
     var accum = 0;
+    var last_update = new Date().getTime();
+    var difference = 0;
     
     setInterval(function() {
-        // bigints can't add decimals, so accumulate the decimals each iteration until it reaches 1 and then add it
-        accum += mod;
-        
-        addBTC(div);
-        
-        if (accum >= 1)
-        {
-            addBTC(1);
-            accum = 0;
+        let now = new Date().getTime();
+        difference += now - last_update;
+        last_update = now;
+
+        // catch up if we are behind
+        while (difference >= tick) {
+            // bigints can't add decimals, so accumulate the decimals each iteration until it reaches 1 and then add it
+            accum += mod;
+            addBTC(div);
+            
+            if (accum >= 1)
+            {
+                addBTC(1);
+                accum = accum - 1;
+            }
+            difference -= tick;
         }
-    }, 50);
+    }, tick);
     
     // display loading screen until everything is loaded
     $(window).load(function() {
