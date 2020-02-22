@@ -14,6 +14,7 @@ The server should start on port 8080 by default.
   * [Coindesk API](https://www.coindesk.com/coindesk-api)
   * [jQuery](https://jquery.com/)
   * [Express](https://expressjs.com)
+  * [Request](https://www.npmjs.com/package/request)
 
 ## Licensing
 This project is licensed under the GNU GPLv3 - see [LICENSE](https://raw.githubusercontent.com/Kipwisp/bitcoin-miner/master/LICENSE) for details.
