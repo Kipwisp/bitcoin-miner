@@ -204,8 +204,6 @@ $(document).ready(function(){
         if (current)
         {
             $.post( "/btc.json", function( data ) {
-                console.log("Recieved BTC data successfully.");
-                
                 if (previousPrice == 0) // check if this is the first instance of data recieved and if so then set up the previous price to be use to find the change in price next iteration
                     previousPrice = data;  
                 else
@@ -225,7 +223,6 @@ $(document).ready(function(){
         else
         {
             $.post( "/btc_yesterday.json", function( data ) {
-                console.log("Recieved Yesterday's BTC data successfully.");
                 yesterdayPrice = data;
             });
         }
