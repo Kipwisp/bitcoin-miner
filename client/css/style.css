@@ -220,7 +220,7 @@ textarea:focus, input:focus{
 }
 
 #loading {
-    background-image: url("/img/assets/load.gif");
+    background-image: url("/img/assets/load.png");
     display: block;
     position: absolute;
     text-align: center;

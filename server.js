@@ -72,8 +72,8 @@ app.get('/img/assets/icon.png', function (req, res) {
   res.sendFile(path.join(__dirname+'/client/img/assets/icon.png'));
 });
 
-app.get('/img/assets/load.gif', function (req, res) {
-  res.sendFile(path.join(__dirname+'/client/img/assets/load.gif'));
+app.get('/img/assets/load.png', function (req, res) {
+  res.sendFile(path.join(__dirname+'/client/img/assets/load.png'));
 });
 
 app.get('/img/canvas/rays_final.png', function (req, res) {
